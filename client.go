@@ -375,7 +375,7 @@ func (mb *client) Read(variable string) (value interface{}, err error) {
 		return
 	}
 	//var area, dbNumber, start, amount, wordLen int
-	var buffer []byte
+	buffer := make([]byte, 255)
 	switch valueArea := variable[0:2]; valueArea {
 	case "EB": //input byte
 	case "EW": //input word
