@@ -111,7 +111,7 @@ func (mb *tcpTransporter) Send(request []byte) (response []byte, err error) {
 		return
 	}
 	// Send data
-	mb.logf("s7: sending % x", request)
+	//mb.logf("s7: sending % x", request)
 	if _, err = mb.conn.Write(request); err != nil {
 		return
 	}
@@ -151,7 +151,7 @@ func (mb *tcpTransporter) Send(request []byte) (response []byte, err error) {
 		return
 	}
 	response = data[0:length]
-	mb.logf("s7: received % x\n", response)
+	//mb.logf("s7: received % x\n", response)
 	return
 }
 
